@@ -1,0 +1,35 @@
+site_name: b-package
+site_url: https://brunofariadf.github.io/b-package"
+repo_url: "https://github.com/brunofariadf/b-package"
+theme: 
+  name: windmill
+  favicon: img/favicon.png
+
+plugins:
+  - mkdocs-jupyter
+
+nav:
+  # - Home: index.md
+  - introduction: introduction.md
+  - vscoder: vscoder/vscoder.ipynb
+  - changelog: changelog.md
+
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: '#'
+
+markdown_extensions:
+  - pymdownx.tasklist
+  - pymdownx.mark
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra:
+  history_buttons: false
+  version: 0.0.0.9000
+extra_css: [stylesheets/style.css]
