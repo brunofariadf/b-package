@@ -1,12 +1,13 @@
 site_name: b-package
 site_url: https://brunofariadf.github.io/b-package"
-repo_url: "https://github.com/brunofariadf/b-package"
+# repo_url: "https://github.com/brunofariadf/b-package"
 theme: 
   name: windmill
   favicon: img/favicon.png
 
 plugins:
   - mkdocs-jupyter
+  - search
 
 nav:
   # - Home: index.md
@@ -31,5 +32,5 @@ markdown_extensions:
 
 extra:
   history_buttons: false
-  version: 0.0.0.9000
+  version: 0.0.1.9000
 extra_css: [stylesheets/style.css]
