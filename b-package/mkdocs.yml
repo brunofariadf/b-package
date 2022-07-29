@@ -21,14 +21,17 @@ markdown_extensions:
       permalink: '#'
 
 markdown_extensions:
-  - pymdownx.tasklist
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.mark
   - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_div_format
+      # custom_fences:
+      #   - name: mermaid
+      #     class: mermaid
+      #     format: !!python/name:pymdownx.superfences.fence_div_format
 
 extra:
   history_buttons: false
