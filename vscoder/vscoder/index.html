@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://brunofariadf.github.io/b-package"/vscoder/vscoder/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>vscoder - b-package</title>
+    <title>vscoder  - b-package</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -33,7 +33,9 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "vscoder", url: "#_top", children: [
+          {title: "vscoder ", url: "#_top", children: [
+              {title: "Overview", url: "#overview" },
+              {title: "Installation", url: "#installation" },
               {title: "Function", url: "#function" },
               {title: "Usage", url: "#usage" },
               {title: "Review", url: "#review" },
@@ -1120,24 +1122,59 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="vscoder">vscoder<a class="anchor-link" href="#vscoder">&#182;</a></h1><p>Some working functions are provided in the R programming language flow and the VS Code editor. You can check vs code editor version, extensions, and other utilities.</p>
+<h1 id="vscoder">vscoder <img src="../img/vscoder.png" align="right" width="100" /><a class="anchor-link" href="#vscoder">&#182;</a></h1><p><img src="https://img.shields.io/badge/lifecycle-experimental-lightgrey" alt="lifecycle:
+experimental"><img src="https://img.shields.io/badge/status-development-blue" alt="status:
+development"></p>
+<h2 id="overview">Overview<a class="anchor-link" href="#overview">&#182;</a></h2><p>Some functions are provided for the workflow between the R programming language and the VS Code editor.</p>
+<table>
+<thead><tr>
+<th style="text-align:left">package</th>
+<th style="text-align:left">version</th>
+<th style="text-align:left">license</th>
+<th style="text-align:left">title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">vscoder</td>
+<td style="text-align:left">0.2.2.9000</td>
+<td style="text-align:left">MIT + file LICENSE</td>
+<td style="text-align:left">Working tool for R and VS Code editor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation<a class="anchor-link" href="#installation">&#182;</a></h2><p>CRAN</p>
+<div class="highlight"><pre><span></span><span class="n">Wait.</span>
+</pre></div>
+<p><a href="https://github.com/brunofariadf/vscoder">Github</a></p>
+<div class="highlight"><pre><span></span><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;brunofariadf/vscoder&quot;</span><span class="p">)</span>
+</pre></div>
 <h2 id="function">Function<a class="anchor-link" href="#function">&#182;</a></h2><table>
 <thead><tr>
 <th style="text-align:left">function</th>
+<th style="text-align:left">argument</th>
 <th style="text-align:left">about</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left">exists_vscode</td>
+<td style="text-align:left">()</td>
+<td style="text-align:left">Check the VS Code Editor</td>
+</tr>
+<tr>
 <td style="text-align:left">path_extension</td>
+<td style="text-align:left">(extension)</td>
 <td style="text-align:left">VS Code Extension Path</td>
 </tr>
 <tr>
 <td style="text-align:left">vscode_extension</td>
+<td style="text-align:left">(type = "basic", format = TRUE)</td>
 <td style="text-align:left">VS Code Extension</td>
 </tr>
 <tr>
 <td style="text-align:left">vscode_version</td>
+<td style="text-align:left">()</td>
 <td style="text-align:left">VS Code Version</td>
 </tr>
 </tbody>
@@ -1153,7 +1190,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="usage">Usage<a class="anchor-link" href="#usage">&#182;</a></h2><h3 id="vscodervscode_version"><code>vscoder::vscode_version()</code><a class="anchor-link" href="#vscodervscode_version">&#182;</a></h3>
+<h2 id="usage">Usage<a class="anchor-link" href="#usage">&#182;</a></h2><h3 id="vscoderexists_vscode"><code>vscoder::exists_vscode()</code><a class="anchor-link" href="#vscoderexists_vscode">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1163,7 +1200,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1178,9 +1215,76 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">exists_vscode</span><span class="p">()</span>
+</pre></div>
+<div id="cell-1" class="clipboard-copy-txt">vscoder::exists_vscode()</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+TRUE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="vscodervscode_version"><code>vscoder::vscode_version()</code><a class="anchor-link" href="#vscodervscode_version">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">vscode_version</span><span class="p">()</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">vscoder::vscode_version()</div>
+<div id="cell-2" class="clipboard-copy-txt">vscoder::vscode_version()</div>
     
         </div>
     </div>
@@ -1230,12 +1334,12 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-2">
+            <clipboard-copy for="cell-3">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1245,9 +1349,9 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">vscode_extension</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">vscode_extension</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;info&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">vscoder::vscode_extension()</div>
+<div id="cell-3" class="clipboard-copy-txt">vscoder::vscode_extension(type = "info")</div>
     
         </div>
     </div>
@@ -1271,21 +1375,26 @@ Licensed under the Apache License, Version 2.0.
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table class="dataframe">
-<caption>A data.frame: 9 × 2</caption>
+<caption>A data.frame: 14 × 5</caption>
 <thead>
-	<tr><th scope=col>id</th><th scope=col>version</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+	<tr><th scope=col>id</th><th scope=col>version</th><th scope=col>license</th><th scope=col>publisher</th><th scope=col>description</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>hediet.vscode-drawio        </td><td>1.6.4            </td></tr>
-	<tr><td>julialang.language-julia    </td><td>1.6.24           </td></tr>
-	<tr><td>ms-python.python            </td><td>2022.10.1        </td></tr>
-	<tr><td>ms-python.vscode-pylance    </td><td>2022.7.40        </td></tr>
-	<tr><td>ms-toolsai.jupyter          </td><td>2022.6.1201981810</td></tr>
-	<tr><td>ms-toolsai.jupyter-keymap   </td><td>1.0.0            </td></tr>
-	<tr><td>ms-toolsai.jupyter-renderers</td><td>1.0.9            </td></tr>
-	<tr><td>quarto.quarto               </td><td>1.28.0           </td></tr>
-	<tr><td>reditorsupport.r            </td><td>2.5.2            </td></tr>
+	<tr><td>hediet.vscode-dr~</td><td>NA               </td><td>NA               </td><td>NA               </td><td>NA               </td></tr>
+	<tr><td>hediet.vscode-dr~</td><td>1.6.4            </td><td>GPL-3.0          </td><td>Henning Dieteric~</td><td>This unofficial ~</td></tr>
+	<tr><td>julialang.langua~</td><td>NA               </td><td>NA               </td><td>NA               </td><td>NA               </td></tr>
+	<tr><td>julialang.langua~</td><td>1.6.28           </td><td>SEE LICENSE IN L~</td><td>julialang        </td><td>Julia Language S~</td></tr>
+	<tr><td>ms-python.python~</td><td>2022.10.1        </td><td>MIT              </td><td>Microsoft        </td><td>IntelliSense (Py~</td></tr>
+	<tr><td>ms-python.vscode~</td><td>2022.7.40        </td><td>SEE LICENSE IN L~</td><td>Microsoft        </td><td>A performant, fe~</td></tr>
+	<tr><td>ms-toolsai.jupyt~</td><td>2022.6.120198181~</td><td>MIT              </td><td>Microsoft        </td><td>Jupyter notebook~</td></tr>
+	<tr><td>ms-toolsai.jupyt~</td><td>1.0.0            </td><td>MIT              </td><td>Microsoft        </td><td>Jupyter keymaps ~</td></tr>
+	<tr><td>ms-toolsai.jupyt~</td><td>1.0.9            </td><td>MIT              </td><td>Microsoft        </td><td>Renderers for Ju~</td></tr>
+	<tr><td>ms-toolsai.jupyt~</td><td>1.0.0            </td><td>MIT              </td><td>Microsoft        </td><td>Jupyter keymaps ~</td></tr>
+	<tr><td>ms-toolsai.jupyt~</td><td>1.0.9            </td><td>MIT              </td><td>Microsoft        </td><td>Renderers for Ju~</td></tr>
+	<tr><td>ms-vscode.powers~</td><td>2022.6.3         </td><td>SEE LICENSE IN L~</td><td>Microsoft        </td><td>Develop PowerShe~</td></tr>
+	<tr><td>quarto.quarto-1.~</td><td>1.29.0           </td><td>MIT              </td><td>Quarto           </td><td>Extension for th~</td></tr>
+	<tr><td>reditorsupport.r~</td><td>2.5.2            </td><td>SEE LICENSE IN L~</td><td>REditorSupport   </td><td>R Extension for ~</td></tr>
 </tbody>
 </table>
 
@@ -1320,7 +1429,7 @@ Licensed under the Apache License, Version 2.0.
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-3">
+            <clipboard-copy for="cell-4">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1332,7 +1441,7 @@ Licensed under the Apache License, Version 2.0.
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">path_extension</span><span class="p">(</span><span class="s">&quot;hediet.vscode-drawio&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">vscoder::path_extension("hediet.vscode-drawio")</div>
+<div id="cell-4" class="clipboard-copy-txt">vscoder::path_extension("hediet.vscode-drawio")</div>
     
         </div>
     </div>
@@ -1378,10 +1487,25 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="review">Review<a class="anchor-link" href="#review">&#182;</a></h2><h4 id="note-from-version-vscoder-0009000">Note from version - vscoder 0.0.0.9000<a class="anchor-link" href="#note-from-version-vscoder-0009000">&#182;</a></h4><h5 id="vscoder-development"><code>vscoder</code> (development)<a class="anchor-link" href="#vscoder-development">&#182;</a></h5><ul>
+<h2 id="review">Review<a class="anchor-link" href="#review">&#182;</a></h2><h3 id="vscoder-0229000-2022-07-28">vscoder 0.2.2.9000 (2022-07-28)<a class="anchor-link" href="#vscoder-0229000-2022-07-28">&#182;</a></h3><h4 id="vscoder-development">&gt; vscoder (development)<a class="anchor-link" href="#vscoder-development">&#182;</a></h4><ul>
 <li>development</li>
 </ul>
-<h5 id="vscoder-0009000-2022-07-22"><code>vscoder</code> 0.0.0.9000 (2022-07-22)<a class="anchor-link" href="#vscoder-0009000-2022-07-22">&#182;</a></h5><ul>
+<h4 id="vscoder-0229000-2022-07-28">&gt; vscoder 0.2.2.9000 (2022-07-28)<a class="anchor-link" href="#vscoder-0229000-2022-07-28">&#182;</a></h4><ul>
+<li>Added function <code>exists_vscode()</code> to search installed editor.</li>
+<li><code>vscode_extension()</code> received two arguments: type, a character class
+vector that indicates ‘basic’ or ‘extended’ information about
+installed extension; and ‘format’, a logical class vector that
+indicates whether the return of the function should have abbreviated
+lines.</li>
+<li>Internal package improvements.<ul>
+<li>The internal error system of the package has been redone for the
+purpose of maintaining long-term code.</li>
+<li>The package’s internal version control system has been automated
+for the purpose of maintaining long-term code.</li>
+</ul>
+</li>
+</ul>
+<h4 id="vscoder-0009000-2022-07-22">&gt; vscoder 0.0.0.9000 (2022-07-22)<a class="anchor-link" href="#vscoder-0009000-2022-07-22">&#182;</a></h4><ul>
 <li>Start of the package.</li>
 </ul>
 
