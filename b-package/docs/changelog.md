@@ -1,11 +1,15 @@
 # Review
 
-## b-package 0.0.1.9000 (development)
+### `b-package` 0.2.1.9000 (development)
 
 #### Note from version
 
 ##### `b-package` (development)
 - development
+
+##### `b-package` 0.2.1.9000 (2022-07-29)
+- customized introduction page.
+- customized vscoder page.
 
 ##### `b-package` 0.0.1.9000 (2022-07-25)
 - search plug-in fix.

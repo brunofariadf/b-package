@@ -4,6 +4,7 @@ site_url: https://brunofariadf.github.io/b-package"
 theme: 
   name: windmill
   favicon: img/favicon.png
+# copyright: test
 
 plugins:
   - mkdocs-jupyter:
@@ -36,5 +37,5 @@ markdown_extensions:
 
 extra:
   history_buttons: false
-  version: 0.0.1.9000
+  version: 0.2.1.9000
 extra_css: [stylesheets/style.css]
