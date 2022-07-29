@@ -6,7 +6,8 @@ theme:
   favicon: img/favicon.png
 
 plugins:
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      execute: True
   - search
 
 nav:
