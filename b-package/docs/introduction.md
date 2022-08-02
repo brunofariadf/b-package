@@ -30,9 +30,15 @@
             <tbody>
                <tr>
                   <td style="text-align:center;"> vscoder </td>
-                  <td style="text-align:center;"> 0.2.2.9000 </td>
+                  <td style="text-align:center;"> 0.2.4.9000 </td>
                   <td style="text-align:center;"> MIT + file LICENSE </td>
                   <td style="text-align:center;"> Working tool for R and VS Code </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;"> rscript </td>
+                  <td style="text-align:center;"> 0.0.0.9000 </td>
+                  <td style="text-align:center;"> MIT + file LICENSE </td>
+                  <td style="text-align:center;"> Create and Comment in Script R </td>
                </tr>
             </tbody>
          </table>
@@ -78,7 +84,7 @@
                <!-- <tr>
                   <td style="text-align:left;"> review </td>
                   <td style="text-align:left;"> <a href="https://brunofariadf.github.io/b-package/#changelog/">changelog</a> </td>
-               </tr> -->
+                  </tr> -->
                <tr>
                   <td style="text-align:left;"> license </td>
                   <td style="text-align:left;"> <a href="https://github.com/brunofariadf/b-package/blob/main/LICENSE">MIT</a> </td>

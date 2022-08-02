@@ -9,4 +9,16 @@
 ## Platform: windows (10.0.14393)
 ## ------------------------------------------
 
-NULL
+rpkg::extract_package("rscript", type = "info", format = FALSE) |> 
+    dplyr::select(package, version, licence, title) |> 
+    knitr::kable(align = "c", format = "markdown") |> 
+    writeClipboard()
+
+rpkg::extract_function("rscript", type = "info", format = FALSE) |> 
+    dplyr::select(fun, argument, title) |> 
+    knitr::kable(align = "c", format = "markdown") |> 
+    writeClipboard()
+
+rpkg:::.df_item("rscript")[["script_head"]] |> 
+    knitr::kable(align = "c", format = "markdown") |> 
+    writeClipboard()

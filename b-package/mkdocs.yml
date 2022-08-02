@@ -1,5 +1,5 @@
 site_name: b-package
-site_url: https://brunofariadf.github.io/b-package"
+site_url: https://brunofariadf.github.io/b-package
 # repo_url: "https://github.com/brunofariadf/b-package"
 theme: 
   name: windmill
@@ -15,6 +15,7 @@ nav:
   # - Home: index.md
   - introduction: introduction.md
   - vscoder: vscoder/vscoder.ipynb
+  - rscript: rscript/rscript.ipynb
   - changelog: changelog.md
 
 markdown_extensions:
@@ -37,5 +38,5 @@ markdown_extensions:
 
 extra:
   history_buttons: false
-  version: 0.2.1.9000
+  version: 0.4.1.9000
 extra_css: [stylesheets/style.css]
