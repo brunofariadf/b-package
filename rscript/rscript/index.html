@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://brunofariadf.github.io/b-package/vscoder/vscoder/">
+    <link rel="canonical" href="https://brunofariadf.github.io/b-package/rscript/rscript/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>vscoder  - b-package</title>
+    <title>rscript  - b-package</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -33,7 +33,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "vscoder ", url: "#_top", children: [
+          {title: "rscript ", url: "#_top", children: [
               {title: "Overview", url: "#overview" },
               {title: "Installation", url: "#installation" },
               {title: "Function", url: "#function" },
@@ -66,20 +66,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../rscript/rscript/" class="btn btn-xs btn-default pull-right">
+      <a href="../../changelog/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../rscript/rscript/" class="btn btn-xs btn-link">
-        rscript 
+      <a href="../../changelog/" class="btn btn-xs btn-link">
+        changelog
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../../introduction/" class="btn btn-xs btn-default pull-left">
+      <a href="../../vscoder/vscoder/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../introduction/" class="btn btn-xs btn-link">
-        introduction
+        Previous</a><a href="../../vscoder/vscoder/" class="btn btn-xs btn-link">
+        vscoder 
       </a>
     </div>
     
@@ -1123,8 +1123,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="vscoder">vscoder <img src="../img/vscoder.png" align="right" width="100" /><a class="anchor-link" href="#vscoder">&#182;</a></h1><p><img src="https://img.shields.io/badge/status-development-blue" alt="status:development"></p>
-<h2 id="overview">Overview<a class="anchor-link" href="#overview">&#182;</a></h2><p>Some functions are provided for the workflow between the R programming language and the VS Code editor.</p>
+<h1 id="rscript">rscript <img src="../img/rscript.png" align="right" width="100" /><a class="anchor-link" href="#rscript">&#182;</a></h1><p><img src="https://img.shields.io/badge/status-development-blue" alt="status:development"></p>
+<h2 id="overview">Overview<a class="anchor-link" href="#overview">&#182;</a></h2><p>Create and comment in script R. The creation of the r script inserts the information from the code development environment such as code editor, platform, author name, among others. Comments can be called interactively with output on the clipboard or in console.</p>
 <table>
 <thead><tr>
 <th style="text-align:center">package</th>
@@ -1135,18 +1135,18 @@ Licensed under the Apache License, Version 2.0.
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">vscoder</td>
-<td style="text-align:center">0.2.4.9000</td>
+<td style="text-align:center">rscript</td>
+<td style="text-align:center">0.0.0.9000</td>
 <td style="text-align:center">MIT + file LICENSE</td>
-<td style="text-align:center">Working tool for R and VS Code</td>
+<td style="text-align:center">Create and Comment in Script R</td>
 </tr>
 </tbody>
 </table>
 <h2 id="installation">Installation<a class="anchor-link" href="#installation">&#182;</a></h2><p>CRAN</p>
 <div class="highlight"><pre><span></span><span class="n">Wait.</span>
 </pre></div>
-<p><a href="https://github.com/brunofariadf/vscoder">Github</a></p>
-<div class="highlight"><pre><span></span><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;brunofariadf/vscoder&quot;</span><span class="p">)</span>
+<p><a href="https://github.com/brunofariadf/rscript">Github</a></p>
+<div class="highlight"><pre><span></span><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;brunofariadf/rscript&quot;</span><span class="p">)</span>
 </pre></div>
 <h2 id="function">Function<a class="anchor-link" href="#function">&#182;</a></h2><table>
 <thead><tr>
@@ -1157,24 +1157,24 @@ Licensed under the Apache License, Version 2.0.
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">exists_vscode</td>
-<td style="text-align:center">()</td>
-<td style="text-align:center">Check the VS Code Editor</td>
+<td style="text-align:center">script_comment</td>
+<td style="text-align:center">(x, type_comment = "h1", type_line = "-", type_size = NULL, clipboard = TRUE)</td>
+<td style="text-align:center">Comment Type to Script R</td>
 </tr>
 <tr>
-<td style="text-align:center">path_extension</td>
-<td style="text-align:center">(extension)</td>
-<td style="text-align:center">VS Code Extension Path</td>
+<td style="text-align:center">script_count</td>
+<td style="text-align:center">(path, exclude = "#&#124;^$")</td>
+<td style="text-align:center">Count Line of Code</td>
 </tr>
 <tr>
-<td style="text-align:center">vscode_extension</td>
-<td style="text-align:center">(type = "basic", format = TRUE)</td>
-<td style="text-align:center">VS Code Extension</td>
+<td style="text-align:center">script_create</td>
+<td style="text-align:center">(path, name_script, name_author = NULL, name_project = NULL, type_line = "-", type_size = 42, add_line = NULL, rm_line = NULL)</td>
+<td style="text-align:center">Create R Script</td>
 </tr>
 <tr>
-<td style="text-align:center">vscode_version</td>
-<td style="text-align:center">()</td>
-<td style="text-align:center">VS Code Version</td>
+<td style="text-align:center">script_head</td>
+<td style="text-align:center">(name_author = NULL, name_project = NULL, type_language = "r", type_line = "-", type_size = 42, add_line = NULL, rm_line = NULL, clipboard = TRUE)</td>
+<td style="text-align:center">Header to R Script</td>
 </tr>
 </tbody>
 </table>
@@ -1189,30 +1189,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="argument">Argument<a class="anchor-link" href="#argument">&#182;</a></h2><h3 id="vscoderexists_vscode"><code>vscoder::exists_vscode()</code><a class="anchor-link" href="#vscoderexists_vscode">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>NULL</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="vscoderpath_extensionextension"><code>vscoder::path_extension(extension)</code><a class="anchor-link" href="#vscoderpath_extensionextension">&#182;</a></h3>
+<h2 id="argument">Argument<a class="anchor-link" href="#argument">&#182;</a></h2><h3 id="rscriptscript_commentx-type_comment-h1-type_line-type_size-null-clipboard-true"><code>rscript::script_comment(x, type_comment = "h1", type_line = "-", type_size = NULL, clipboard = TRUE)</code><a class="anchor-link" href="#rscriptscript_commentx-type_comment-h1-type_line-type_size-null-clipboard-true">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1231,8 +1208,24 @@ Licensed under the Apache License, Version 2.0.
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">extension</td>
-<td style="text-align:center">character class vector that indicates the extension id.</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">character class vector that indicates the message of the title or subtitle of the comment.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_comment</td>
+<td style="text-align:center">character class vector that indicates the comment type with option 'h1', 'h2' or 'h3'.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_line</td>
+<td style="text-align:center">character class vector that indicates the format type to header.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_size</td>
+<td style="text-align:center">numeric class vector that indicates the length to header.</td>
+</tr>
+<tr>
+<td style="text-align:center">clipboard</td>
+<td style="text-align:center">logical class vector that indicates output to clipboard or console with option 'TRUE' or 'FALSE'.</td>
 </tr>
 </tbody>
 </table>
@@ -1247,7 +1240,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="vscodervscode_extensiontype-basic-format-true"><code>vscoder::vscode_extension(type = "basic", format = TRUE)</code><a class="anchor-link" href="#vscodervscode_extensiontype-basic-format-true">&#182;</a></h3>
+<h3 id="rscriptscript_countpath-exclude"><code>rscript::script_count(path, exclude = "#|^$")</code><a class="anchor-link" href="#rscriptscript_countpath-exclude">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1266,12 +1259,12 @@ Licensed under the Apache License, Version 2.0.
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">type</td>
-<td style="text-align:center">character class vector that indicates the extension search type with option 'basic' and 'info'.</td>
+<td style="text-align:center">path</td>
+<td style="text-align:center">character class vector that indicates the file path.</td>
 </tr>
 <tr>
-<td style="text-align:center">format</td>
-<td style="text-align:center">logical class vector that indicates if must be the column formated with option 'TRUE' or 'FALSE'.</td>
+<td style="text-align:center">exclude</td>
+<td style="text-align:center">character class vector that indicates the default to exclude with regular expression.</td>
 </tr>
 </tbody>
 </table>
@@ -1286,7 +1279,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="vscodervscode_version"><code>vscoder::vscode_version()</code><a class="anchor-link" href="#vscodervscode_version">&#182;</a></h3>
+<h3 id="rscriptscript_createpath-name_script-name_author-null-name_project-null-type_line-type_size-42-add_line-null-rm_line-null"><code>rscript::script_create(path, name_script, name_author = NULL, name_project = NULL, type_line = "-", type_size = 42, add_line = NULL, rm_line = NULL)</code><a class="anchor-link" href="#rscriptscript_createpath-name_script-name_author-null-name_project-null-type_line-type_size-42-add_line-null-rm_line-null">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1297,7 +1290,47 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>NULL</p>
+<table>
+<thead><tr>
+<th style="text-align:center">argument</th>
+<th style="text-align:center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">character class vector that indicates the directory path.</td>
+</tr>
+<tr>
+<td style="text-align:center">name_script</td>
+<td style="text-align:center">character class vector that indicates the file name.</td>
+</tr>
+<tr>
+<td style="text-align:center">name_author</td>
+<td style="text-align:center">character class vector that indicates the author name.</td>
+</tr>
+<tr>
+<td style="text-align:center">name_project</td>
+<td style="text-align:center">character class vector that indicates the author project.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_line</td>
+<td style="text-align:center">character class vector that indicates the format type to header.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_size</td>
+<td style="text-align:center">numeric class vector that indicates the length to header.</td>
+</tr>
+<tr>
+<td style="text-align:center">add_line</td>
+<td style="text-align:center">numeric class vector that indicates the vector to add in the header.</td>
+</tr>
+<tr>
+<td style="text-align:center">rm_line</td>
+<td style="text-align:center">numeric class vector that indicates the vector to remove in the header.</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -1309,7 +1342,70 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="usage">Usage<a class="anchor-link" href="#usage">&#182;</a></h2><h3 id="vscoderexists_vscode"><code>vscoder::exists_vscode()</code><a class="anchor-link" href="#vscoderexists_vscode">&#182;</a></h3>
+<h3 id="rscriptscript_headname_author-null-name_project-null-type_language-r-type_line-type_size-42-add_line-null-rm_line-null-clipboard-true"><code>rscript::script_head(name_author = NULL, name_project = NULL, type_language = "r", type_line = "-", type_size = 42, add_line = NULL, rm_line = NULL, clipboard = TRUE)</code><a class="anchor-link" href="#rscriptscript_headname_author-null-name_project-null-type_language-r-type_line-type_size-42-add_line-null-rm_line-null-clipboard-true">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<table>
+<thead><tr>
+<th style="text-align:center">argument</th>
+<th style="text-align:center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name_author</td>
+<td style="text-align:center">character class vector that indicates the author name.</td>
+</tr>
+<tr>
+<td style="text-align:center">name_project</td>
+<td style="text-align:center">character class vector that indicates the author project.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_language</td>
+<td style="text-align:center">character class vector that indicates the language version with option 'r', 'python' and 'julia'.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_line</td>
+<td style="text-align:center">character class vector that indicates the format type to header.</td>
+</tr>
+<tr>
+<td style="text-align:center">type_size</td>
+<td style="text-align:center">numeric class vector that indicates the length to header.</td>
+</tr>
+<tr>
+<td style="text-align:center">add_line</td>
+<td style="text-align:center">numeric class vector that indicates the vector to add in the header.</td>
+</tr>
+<tr>
+<td style="text-align:center">rm_line</td>
+<td style="text-align:center">numeric class vector that indicates the vector to remove in the header.</td>
+</tr>
+<tr>
+<td style="text-align:center">clipboard</td>
+<td style="text-align:center">logical class vector that indicates output to clipboard or console with option 'TRUE' or 'FALSE'.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="usage">Usage<a class="anchor-link" href="#usage">&#182;</a></h2><h3 id="rscriptscript_comment"><code>rscript::script_comment()</code><a class="anchor-link" href="#rscriptscript_comment">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1334,234 +1430,9 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">exists_vscode</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">rscript</span><span class="o">::</span><span class="nf">script_comment</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">,</span> <span class="n">clipboard</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">vscoder::exists_vscode()</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-TRUE
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="vscodervscode_version"><code>vscoder::vscode_version()</code><a class="anchor-link" href="#vscodervscode_version">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-2">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">vscode_version</span><span class="p">()</span>
-</pre></div>
-<div id="cell-2" class="clipboard-copy-txt">vscoder::vscode_version()</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-'1.69.2'
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="vscodervscode_extension"><code>vscoder::vscode_extension()</code><a class="anchor-link" href="#vscodervscode_extension">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-3">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">vscode_extension</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;info&quot;</span><span class="p">)</span>
-</pre></div>
-<div id="cell-3" class="clipboard-copy-txt">vscoder::vscode_extension(type = "info")</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table class="dataframe">
-<caption>A data.frame: 15 × 5</caption>
-<thead>
-	<tr><th scope=col>id</th><th scope=col>version</th><th scope=col>license</th><th scope=col>publisher</th><th scope=col>description</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>hediet.vscode-dr~</td><td>NA               </td><td>NA               </td><td>NA               </td><td>NA               </td></tr>
-	<tr><td>hediet.vscode-dr~</td><td>1.6.4            </td><td>GPL-3.0          </td><td>Henning Dieteric~</td><td>This unofficial ~</td></tr>
-	<tr><td>julialang.langua~</td><td>NA               </td><td>NA               </td><td>NA               </td><td>NA               </td></tr>
-	<tr><td>julialang.langua~</td><td>1.6.28           </td><td>SEE LICENSE IN L~</td><td>julialang        </td><td>Julia Language S~</td></tr>
-	<tr><td>ms-python.python~</td><td>2022.10.1        </td><td>MIT              </td><td>Microsoft        </td><td>IntelliSense (Py~</td></tr>
-	<tr><td>ms-python.vscode~</td><td>2022.7.40        </td><td>SEE LICENSE IN L~</td><td>Microsoft        </td><td>A performant, fe~</td></tr>
-	<tr><td>ms-toolsai.jupyt~</td><td>2022.6.120198181~</td><td>MIT              </td><td>Microsoft        </td><td>Jupyter notebook~</td></tr>
-	<tr><td>ms-toolsai.jupyt~</td><td>1.0.0            </td><td>MIT              </td><td>Microsoft        </td><td>Jupyter keymaps ~</td></tr>
-	<tr><td>ms-toolsai.jupyt~</td><td>1.0.9            </td><td>MIT              </td><td>Microsoft        </td><td>Renderers for Ju~</td></tr>
-	<tr><td>ms-toolsai.jupyt~</td><td>1.0.0            </td><td>MIT              </td><td>Microsoft        </td><td>Jupyter keymaps ~</td></tr>
-	<tr><td>ms-toolsai.jupyt~</td><td>1.0.9            </td><td>MIT              </td><td>Microsoft        </td><td>Renderers for Ju~</td></tr>
-	<tr><td>ms-vscode.powers~</td><td>2022.7.2         </td><td>SEE LICENSE IN L~</td><td>Microsoft        </td><td>Develop PowerShe~</td></tr>
-	<tr><td>quarto.quarto-1.~</td><td>1.29.0           </td><td>MIT              </td><td>Quarto           </td><td>Extension for th~</td></tr>
-	<tr><td>quarto.quarto-1.~</td><td>1.30.0           </td><td>MIT              </td><td>Quarto           </td><td>Extension for th~</td></tr>
-	<tr><td>reditorsupport.r~</td><td>2.5.2            </td><td>SEE LICENSE IN L~</td><td>REditorSupport   </td><td>R Extension for ~</td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="vscoderpath_extensionextension"><code>vscoder::path_extension(extension)</code><a class="anchor-link" href="#vscoderpath_extensionextension">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-4">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">vscoder</span><span class="o">::</span><span class="nf">path_extension</span><span class="p">(</span><span class="s">&quot;hediet.vscode-drawio&quot;</span><span class="p">)</span>
-</pre></div>
-<div id="cell-4" class="clipboard-copy-txt">vscoder::path_extension("hediet.vscode-drawio")</div>
+<div id="cell-1" class="clipboard-copy-txt">rscript::script_comment("Hello world!", clipboard = FALSE)</div>
     
         </div>
     </div>
@@ -1589,7 +1460,438 @@ TRUE
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
-<ol class=list-inline><li>'C:\\Users\\Bruno\\.vscode\\extensions\\hediet.vscode-drawio-1.6.2'</li><li>'C:\\Users\\Bruno\\.vscode\\extensions\\hediet.vscode-drawio-1.6.4'</li></ol>
+<ol class=list-inline><li>'## --------------------------------------------------------------------------------'</li><li>'## Hello world! - date: 2022-08-02 18:33:25'</li><li>'## --------------------------------------------------------------------------------'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">rscript</span><span class="o">::</span><span class="nf">script_comment</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">,</span> <span class="n">type_comment</span> <span class="o">=</span> <span class="s">&quot;h3&quot;</span><span class="p">,</span> <span class="n">clipboard</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+<div id="cell-2" class="clipboard-copy-txt">rscript::script_comment("Hello world!", type_comment = "h3", clipboard = FALSE)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'## Hello world! ---'
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="rscriptscript_head"><code>rscript::script_head()</code><a class="anchor-link" href="#rscriptscript_head">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-3">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="c1"># in the console breaks the line</span>
+<span class="n">rscript</span><span class="o">::</span><span class="nf">script_head</span><span class="p">(</span><span class="n">clipboard</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">rscript</span><span class="o">::</span><span class="nf">script_head</span><span class="p">(</span><span class="n">type_language</span> <span class="o">=</span> <span class="s">&quot;python&quot;</span><span class="p">,</span> <span class="n">clipboard</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">rscript</span><span class="o">::</span><span class="nf">script_head</span><span class="p">(</span><span class="n">type_language</span> <span class="o">=</span> <span class="s">&quot;julia&quot;</span><span class="p">,</span> <span class="n">clipboard</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+<div id="cell-3" class="clipboard-copy-txt"># in the console breaks the line
+rscript::script_head(clipboard = FALSE)
+rscript::script_head(type_language = "python", clipboard = FALSE)
+rscript::script_head(type_language = "julia", clipboard = FALSE)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'## ------------------------------------------'</li><li><span style=white-space:pre-wrap>'##                          Date: 2022-08-02'</span></li><li>'## ------------------------------------------'</li><li>'## Project: '</li><li>'## Author: '</li><li>'## '</li><li>'## GUI: RTerm'</li><li>'## Language: R (4.1.0)'</li><li>'## Platform: Windows'</li><li>'## ------------------------------------------'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'## ------------------------------------------'</li><li><span style=white-space:pre-wrap>'##                          Date: 2022-08-02'</span></li><li>'## ------------------------------------------'</li><li>'## Project: '</li><li>'## Author: '</li><li>'## '</li><li>'## GUI: RTerm'</li><li>'## Language: Python (3.9.6)'</li><li>'## Platform: Windows'</li><li>'## ------------------------------------------'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'## ------------------------------------------'</li><li><span style=white-space:pre-wrap>'##                          Date: 2022-08-02'</span></li><li>'## ------------------------------------------'</li><li>'## Project: '</li><li>'## Author: '</li><li>'## '</li><li>'## GUI: RTerm'</li><li>'## Language: Julia (1.7.3)'</li><li>'## Platform: Windows'</li><li>'## ------------------------------------------'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-4">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="c1"># output correct</span>
+
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+<span class="c1"># &#39;##                          Date: 2022-08-01&#39;</span>
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+<span class="c1"># &#39;## Project: &#39;</span>
+<span class="c1"># &#39;## Author: &#39;</span>
+<span class="c1"># &#39;## &#39;</span>
+<span class="c1"># &#39;## GUI: RTerm&#39;</span>
+<span class="c1"># &#39;## Language: R (4.1.0)&#39;</span>
+<span class="c1"># &#39;## Platform: Windows&#39;</span>
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+<span class="c1"># &#39;##                          Date: 2022-08-01&#39;</span>
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+<span class="c1"># &#39;## Project: &#39;</span>
+<span class="c1"># &#39;## Author: &#39;</span>
+<span class="c1"># &#39;## &#39;</span>
+<span class="c1"># &#39;## GUI: RTerm&#39;</span>
+<span class="c1"># &#39;## Language: Python (3.9.6)&#39;</span>
+<span class="c1"># &#39;## Platform: Windows&#39;</span>
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+<span class="c1"># &#39;##                          Date: 2022-08-01&#39;</span>
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+<span class="c1"># &#39;## Project: &#39;</span>
+<span class="c1"># &#39;## Author: &#39;</span>
+<span class="c1"># &#39;## &#39;</span>
+<span class="c1"># &#39;## GUI: RTerm&#39;</span>
+<span class="c1"># &#39;## Language: Julia (1.7.3)&#39;</span>
+<span class="c1"># &#39;## Platform: Windows&#39;</span>
+<span class="c1"># &#39;## ------------------------------------------&#39;</span>
+</pre></div>
+<div id="cell-4" class="clipboard-copy-txt"># output correct
+
+# '## ------------------------------------------'
+# '##                          Date: 2022-08-01'
+# '## ------------------------------------------'
+# '## Project: '
+# '## Author: '
+# '## '
+# '## GUI: RTerm'
+# '## Language: R (4.1.0)'
+# '## Platform: Windows'
+# '## ------------------------------------------'
+
+# '## ------------------------------------------'
+# '##                          Date: 2022-08-01'
+# '## ------------------------------------------'
+# '## Project: '
+# '## Author: '
+# '## '
+# '## GUI: RTerm'
+# '## Language: Python (3.9.6)'
+# '## Platform: Windows'
+# '## ------------------------------------------'
+
+# '## ------------------------------------------'
+# '##                          Date: 2022-08-01'
+# '## ------------------------------------------'
+# '## Project: '
+# '## Author: '
+# '## '
+# '## GUI: RTerm'
+# '## Language: Julia (1.7.3)'
+# '## Platform: Windows'
+# '## ------------------------------------------'</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="rscriptscript_create"><code>rscript::script_create()</code><a class="anchor-link" href="#rscriptscript_create">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-5">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">path_i</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="s">&quot;C:&quot;</span><span class="p">,</span> <span class="s">&quot;users&quot;</span><span class="p">,</span> <span class="s">&quot;Bruno&quot;</span><span class="p">,</span> <span class="s">&quot;documents&quot;</span><span class="p">,</span> <span class="s">&quot;tests&quot;</span><span class="p">)</span>
+<span class="n">rscript</span><span class="o">::</span><span class="nf">script_create</span><span class="p">(</span><span class="n">path_i</span><span class="p">,</span> <span class="n">name_script</span> <span class="o">=</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;test_&quot;</span><span class="p">,</span> <span class="m">0</span><span class="o">:</span><span class="m">9</span><span class="p">))</span>
+<span class="n">fs</span><span class="o">::</span><span class="nf">dir_tree</span><span class="p">(</span><span class="n">path_i</span><span class="p">)</span>
+</pre></div>
+<div id="cell-5" class="clipboard-copy-txt">path_i <- file.path("C:", "users", "Bruno", "documents", "tests")
+rscript::script_create(path_i, name_script = paste0("test_", 0:9))
+fs::dir_tree(path_i)
+</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre><span class="ansi-blue-intense-fg ansi-bold">C:/users/Bruno/documents/tests</span>
++-- <span class="ansi-green-fg">test_0.R</span>
++-- <span class="ansi-green-fg">test_1.R</span>
++-- <span class="ansi-green-fg">test_2.R</span>
++-- <span class="ansi-green-fg">test_3.R</span>
++-- <span class="ansi-green-fg">test_4.R</span>
++-- <span class="ansi-green-fg">test_5.R</span>
++-- <span class="ansi-green-fg">test_6.R</span>
++-- <span class="ansi-green-fg">test_7.R</span>
++-- <span class="ansi-green-fg">test_8.R</span>
+\-- <span class="ansi-green-fg">test_9.R</span>
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="rscriptscript_count"><code>rscript::script_count()</code><a class="anchor-link" href="#rscriptscript_count">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-6">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">path_i</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="s">&quot;C:&quot;</span><span class="p">,</span> <span class="s">&quot;users&quot;</span><span class="p">,</span> <span class="s">&quot;Bruno&quot;</span><span class="p">,</span> <span class="s">&quot;documents&quot;</span><span class="p">,</span> <span class="s">&quot;tests&quot;</span><span class="p">)</span>
+<span class="n">path_i</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="n">path_i</span><span class="p">,</span> <span class="n">full.names</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1"># count comment</span>
+<span class="n">rscript</span><span class="o">::</span><span class="nf">script_count</span><span class="p">(</span><span class="n">path_i</span><span class="p">,</span> <span class="n">exclude</span> <span class="o">=</span> <span class="s">&quot;^$&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-6" class="clipboard-copy-txt">path_i <- file.path("C:", "users", "Bruno", "documents", "tests")
+path_i <- list.files(path_i, full.names = TRUE)
+# count comment
+rscript::script_count(path_i, exclude = "^$")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>test_0.R</dt><dd>10</dd><dt>test_1.R</dt><dd>10</dd><dt>test_2.R</dt><dd>10</dd><dt>test_3.R</dt><dd>10</dd><dt>test_4.R</dt><dd>10</dd><dt>test_5.R</dt><dd>10</dd><dt>test_6.R</dt><dd>10</dd><dt>test_7.R</dt><dd>10</dd><dt>test_8.R</dt><dd>10</dd><dt>test_9.R</dt><dd>10</dd></dl>
 
 </div>
 
@@ -1607,33 +1909,10 @@ TRUE
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="review">Review<a class="anchor-link" href="#review">&#182;</a></h2><h3 id="vscoder-0249000-2022-07-31">vscoder 0.2.4.9000 (2022-07-31)<a class="anchor-link" href="#vscoder-0249000-2022-07-31">&#182;</a></h3><h4 id="vscoder-development">&gt; vscoder (development)<a class="anchor-link" href="#vscoder-development">&#182;</a></h4><ul>
+<h2 id="review">Review<a class="anchor-link" href="#review">&#182;</a></h2><h3 id="rscript-0009000-2022-08-01">rscript 0.0.0.9000 (2022-08-01)<a class="anchor-link" href="#rscript-0009000-2022-08-01">&#182;</a></h3><h4 id="rscript-development">&gt; rscript (development)<a class="anchor-link" href="#rscript-development">&#182;</a></h4><ul>
 <li>development</li>
 </ul>
-<h4 id="vscoder-0249000-2022-07-31">&gt; vscoder 0.2.4.9000 (2022-07-31)<a class="anchor-link" href="#vscoder-0249000-2022-07-31">&#182;</a></h4><ul>
-<li>Internal package improvements.<ul>
-<li><code>vscode_extension()</code> aplication correct from format argument to
-‘basic’ type argument.</li>
-<li>Removed the old error system.</li>
-</ul>
-</li>
-</ul>
-<h4 id="vscoder-0229000-2022-07-28">&gt; vscoder 0.2.2.9000 (2022-07-28)<a class="anchor-link" href="#vscoder-0229000-2022-07-28">&#182;</a></h4><ul>
-<li>Added function <code>exists_vscode()</code> to search installed editor.</li>
-<li><code>vscode_extension()</code> received two arguments: type, a character class
-vector that indicates ‘basic’ or ‘extended’ information about
-installed extension; and ‘format’, a logical class vector that
-indicates whether the return of the function should have abbreviated
-lines.</li>
-<li>Internal package improvements.<ul>
-<li>The internal error system of the package has been redone for the
-purpose of maintaining long-term code.</li>
-<li>The package’s internal version control system has been automated
-for the purpose of maintaining long-term code.</li>
-</ul>
-</li>
-</ul>
-<h4 id="vscoder-0009000-2022-07-22">&gt; vscoder 0.0.0.9000 (2022-07-22)<a class="anchor-link" href="#vscoder-0009000-2022-07-22">&#182;</a></h4><ul>
+<h4 id="rscript-0009000-2022-08-01">&gt; rscript 0.0.0.9000 (2022-08-01)<a class="anchor-link" href="#rscript-0009000-2022-08-01">&#182;</a></h4><ul>
 <li>Start of the package.</li>
 </ul>
 
@@ -1656,20 +1935,20 @@ for the purpose of maintaining long-term code.</li>
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../rscript/rscript/" class="btn btn-xs btn-default pull-right">
+      <a href="../../changelog/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../rscript/rscript/" class="btn btn-xs btn-link">
-        rscript 
+      <a href="../../changelog/" class="btn btn-xs btn-link">
+        changelog
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../../introduction/" class="btn btn-xs btn-default pull-left">
+      <a href="../../vscoder/vscoder/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../introduction/" class="btn btn-xs btn-link">
-        introduction
+        Previous</a><a href="../../vscoder/vscoder/" class="btn btn-xs btn-link">
+        vscoder 
       </a>
     </div>
     
